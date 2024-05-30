@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/screen"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textSize="30sp"
+        android:gravity="end"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_margin="16dp" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:stretchColumns="*"
+        android:shrinkColumns="*" >
+
+    <TableRow>
+        <Button
+            android:text="7"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+
+        <Button
+            android:text="8"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:text="9"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:id="@+id/btnAdd"
+            android:text="+"
+            android:onClick="setOperator"
+            style="@style/OperatorBtnStyle" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="4"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:text="5"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:text="6"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:id="@+id/btnMin"
+            android:text="-"
+            android:onClick="setOperator"
+            style="@style/OperatorBtnStyle" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="1"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:text="2"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:text="3"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+        <Button
+            android:id="@+id/btnMult"
+            android:text="*"
+            android:onClick="setOperator"
+            style="@style/OperatorBtnStyle" />
+    </TableRow>
+    <TableRow>
+        <Button
+            android:text="0"
+            android:onClick="addNumber"
+            style="@style/DigitBtnStyle" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            android:text="/"
+            android:onClick="setOperator"
+            style="@style/OperatorBtnStyle" />
+        <Button
+            android:id="@+id/btnReset"
+            android:text="C"
+            android:onClick="resetView"
+            style="@style/OperatorBtnStyle" />
+
+        <Button
+            android:id="@+id/btnEgal"
+            android:text="="
+            android:onClick="computeResult"
+            style="@style/OperatorBtnStyle" />
+    </TableRow>
+</TableLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
